@@ -1,0 +1,31 @@
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/man-user.svg" class="details-icon" />
+        </div>
+        <input type="text" class="txt-username" placeholder="username or email" type="username" ng-model="username" />
+    </div>
+</div>
+
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/lock.svg" class="details-icon" />
+        </div>
+        <input type="password" type="text" class="password-field" placeholder="password" ng-model="password" />
+    </div>
+</div>
+
+<p class="login-text forgot-password"><a href="https://google.com">Forgot password?</a></p>
+<button class="button login" ng-click="login()">login</button>
+<p class="login-text or-with">or login with</p>
+
+<div class="disabled">
+    <div class="social-media-logins">
+        <button class="button login-google">google</button>
+        <button class="button login-facebook">facebook</button>
+    </div>
+</div>
+
+<p class="login-text or-with">need and account?</p>
+<button class="button login" ng-click="signup()">sign up</button>

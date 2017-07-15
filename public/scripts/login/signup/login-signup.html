@@ -1,0 +1,51 @@
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/man-user.svg" class="details-icon" />
+        </div>
+        <input type="text" class="signup-field-{{username.errorStyle}}" placeholder="username" type="username" ng-model="username.text" ng-change="usernameChange()" />
+    </div>
+</div>
+<p class="signup-text username-field" ng-if="username.errorMessage.length > 0">{{username.errorMessage}}</p>
+
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/email.svg" class="details-icon" />
+        </div>
+        <input type="text" class="signup-field-{{email.errorStyle}}" placeholder="email" type="email" ng-model="email.text" ng-change="emailChange()" />
+    </div>
+</div>
+<p class="signup-text" ng-if="email.errorMessage.length > 0">{{email.errorMessage}}</p>
+
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/lock.svg" class="details-icon" />
+        </div>
+        <input type="password" placeholder="password" ng-model="password" />
+    </div>
+</div>
+
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/lock.svg" class="details-icon" />
+        </div>
+        <input type="password" placeholder="Re-Password" ng-model="rePassword" />
+    </div>
+</div>
+
+<button class="button login" ng-click="login()">signup</button>
+
+<p class="login-text or-with">or signup with</p>
+
+<div class="disabled">
+    <div class="social-media-logins">
+        <button class="button login-google">google</button>
+        <button class="button login-facebook">facebook</button>
+    </div>
+</div>
+
+<p class="login-text or-with">or</p>
+<p class="login-text or-with" ng-click="cancel()"><a class="cancel-signup">cancel</a></p>

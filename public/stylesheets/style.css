@@ -204,3 +204,29 @@ a {
 a:hover {
     color: #657a8a;
 }
+
+a.cancel-signup {
+    font-size: 1.3em;
+}
+
+a.cancel-signup:hover {
+    cursor: pointer;
+}
+
+.signup-text {
+    font-size: 0.85em;
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding-left: 50px;
+    font-weight: 100;
+}
+
+.signup-field-red {
+    outline: 1px solid red !important;
+}
+
+.signup-field-green {
+    outline: 1px solid #4dd84d !important;
+}
