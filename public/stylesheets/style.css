@@ -23,11 +23,8 @@ body {
     height: auto;
     backdrop-filter: blur(30px);
     margin: 0 auto;
-    /* transform: scale(1.03); */
     margin-top: 10%;
     border-radius: 3px;
-    /* box-shadow: 0px 1px; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
     padding-bottom: 20px;
     padding-top: 80px;
     border: 1px solid #;
@@ -35,25 +32,16 @@ body {
 }
 
 .tappers-logo {
-    position: fixed;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* align-content: center; */
-    /* align-items: center; */
-    /* left: 50%; */
+    position: absolute;
     left: 0;
-    /* -webkit-margin-after: 50%; */
     right: 0;
     z-index: 100;
     margin-top: -60px;
 }
 
 .tappers-logo img {
-    /* margin-left: auto; */
     margin-right: auto;
     width: 120px;
-    /* left: 0; */
-    /* right: 0; */
     display: block;
     margin-left: auto;
     margin-bottom: -10px;
@@ -62,11 +50,7 @@ body {
 img.details-icon {
     width: 23px;
     height: 30px;
-    /* margin-top: 10px; */
-    /* padding-top: 10px; */
     display: inline-block;
-    /* margin-top: 10px; */
-    /* padding-top: 10px; */
     bottom: 5px;
     left: 20px;
 }
@@ -104,7 +88,6 @@ img.details-icon {
     width: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* margin-bottom: 10px; */
 }
 
 .details-container {
@@ -112,7 +95,6 @@ img.details-icon {
 }
 
 .icon-box {
-    /* margin: 0 auto; */
     margin-top: 5px;
 }
 
@@ -177,7 +159,6 @@ button.button.login-google {
 }
 
 button.button.login-facebook {
-    /* width: 150px; */
     width: 50%;
     margin-left: 20px;
     background: #3B5998;
@@ -223,10 +204,25 @@ a.cancel-signup:hover {
     font-weight: 100;
 }
 
+p.title-login {
+    text-align: center;
+    margin-top: -10px;
+    color: #36a3f8;
+}
+
 .signup-field-red {
     outline: 1px solid red !important;
 }
 
 .signup-field-green {
     outline: 1px solid #4dd84d !important;
+}
+
+.blank-space {
+    margin-right: 23px;
+}
+
+h1.error-cant {
+    text-align: center;
+    margin-top: 10px;
 }

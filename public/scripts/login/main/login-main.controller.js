@@ -12,4 +12,9 @@ function LoginMainController($scope, $rootScope, $http, $interval) {
     $scope.signup = function() {
         $rootScope.selectedDirective = 'signup';
     }
+
+    $scope.resetPassword = function() {
+        $rootScope.selectedDirective = 'reset';
+    }
+
 }

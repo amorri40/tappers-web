@@ -1,0 +1,13 @@
+<p class="title-login">Password Reset</p>
+<div class="details-box">
+    <div class="details-container">
+        <div class="icon-box">
+            <img src="images/man-user.svg" class="details-icon" />
+        </div>
+        <input type="text" class="signup-field-{{fields.username.errorStyle}}" placeholder="username" type="username" ng-model="fields.username.text" ng-change="usernameChange()" />
+    </div>
+</div>
+
+<button class="button login" ng-click="login()">reset</button>
+
+<p class="login-text or-with" ng-click="cancel()"><a class="cancel-signup">cancel</a></p>
