@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+#background-image {
+    background: url(../images/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1000;
+    top: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 520px;
+    height: auto;
+    backdrop-filter: blur(30px);
+    margin: 0 auto;
+    /* transform: scale(1.03); */
+    margin-top: 10%;
+    border-radius: 3px;
+    /* box-shadow: 0px 1px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
+    padding-bottom: 20px;
+    padding-top: 80px;
+    border: 1px solid #;
+    border-bottom: 2px solid #869cb0;
+}
+
+.tappers-logo {
+    position: fixed;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* align-content: center; */
+    /* align-items: center; */
+    /* left: 50%; */
+    left: 0;
+    /* -webkit-margin-after: 50%; */
+    right: 0;
+    z-index: 100;
+    margin-top: -60px;
+}
+
+.tappers-logo img {
+    /* margin-left: auto; */
+    margin-right: auto;
+    width: 120px;
+    /* left: 0; */
+    /* right: 0; */
+    display: block;
+    margin-left: auto;
+    margin-bottom: -10px;
+}
+
+img.details-icon {
+    width: 23px;
+    height: 30px;
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+    display: inline-block;
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+    bottom: 5px;
+    left: 20px;
+}
+
+.details-box input {
+    background: #F2F2F2;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 300px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #717171;
+    display: inline-block;
+    margin-left: 20px;
+    transition: 0.1s ease-in;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.details-box input:focus {
+    outline: none;
+    border-bottom: 1px solid #cecece;
+}
+
+.details-box {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
+}
+
+.details-container {
+    display: inherit;
+}
+
+.icon-box {
+    /* margin: 0 auto; */
+    margin-top: 5px;
+}
+
+p.login-text {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #8AAFCC;
+}
+
+p.login-text.forgot-password {
+    text-align: end;
+    margin-left: auto;
+    margin-right: auto;
+    width: 343px;
+}
+
+.button {
+    justify-content: center;
+    display: inline-flex;
+    background: #36a3f8;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    transition: 0.1s ease-in;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+button.button.login {
+    margin: 0 auto;
+    width: 343px;
+    justify-content: center;
+    display: flex;
+}
+
+.button:hover {
+    background-color: #3390d8;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+    background: #54b4ff;
+}
+
+p.login-text.or-with {
+    text-align: center;
+}
+
+.social-media-logins {
+    display: flex;
+    justify-content: center;
+    width: 343px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.button.login-google {
+    width: 50%;
+    background: #DD4B39;
+}
+
+button.button.login-facebook {
+    /* width: 150px; */
+    width: 50%;
+    margin-left: 20px;
+    background: #3B5998;
+}
+
+button.button.login-facebook:hover {
+    background: #2a4275;
+}
+
+button.button.login-google:hover {
+    background: #c54434;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+a {
+    color: #8AAFCC;
+    text-decoration: none;
+    transition: 0.1s ease-in;
+}
+
+a:hover {
+    color: #657a8a;
+}
