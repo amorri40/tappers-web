@@ -5,7 +5,7 @@
         <div class="icon-box">
             <img src="images/man-user.svg" class="details-icon" />
         </div>
-        <input type="text" class="txt-username" placeholder="username or email" type="username" ng-model="username" />
+        <input type="text" class="signup-field-{{errorStyle}}" placeholder="username or email" type="username" ng-model="username" />
     </div>
 </div>
 
@@ -14,9 +14,11 @@
         <div class="icon-box">
             <img src="images/lock.svg" class="details-icon" />
         </div>
-        <input type="password" type="text" class="password-field" placeholder="password" ng-model="password" />
+        <input type="password" type="text" class="signup-field-{{errorStyle}}" placeholder="password" ng-model="password" />
     </div>
 </div>
+
+<p class="signup-text" ng-if="errorMessage.length > 0">{{errorMessage}}</p>
 
 <p class="login-text forgot-password"><a ng-click="resetPassword()">forgot password?</a></p>
 <button class="button login" ng-click="login()">login</button>
@@ -24,7 +26,7 @@
 
 <div class="disabled">
     <div class="social-media-logins">
-        <button class="button login-google">google</button>
+        <button class="button login-google">google 122</button>
         <button class="button login-facebook">facebook</button>
     </div>
 </div>

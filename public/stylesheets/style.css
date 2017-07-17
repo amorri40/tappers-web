@@ -184,6 +184,7 @@ a {
 
 a:hover {
     color: #657a8a;
+    cursor: pointer;
 }
 
 a.cancel-signup {

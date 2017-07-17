@@ -12,6 +12,54 @@ function LoginSignupController($scope, $rootScope, $http, $interval) {
         rePassword: {}
     }
 
+    $scope.signup = function() {
+        let allFine = true;
+
+        for (var key in $scope.fields) {
+            // check also if property is not inherited from prototype
+            if ($scope.fields.hasOwnProperty(key)) {
+                var value = $scope.fields[key];
+                if (value.ready === false) {
+                    allFine = false;
+                }
+            }
+        }
+
+        if (allFine) {
+
+            var user = {
+                username: $scope.fields.username.text,
+                email: $scope.fields.email.text,
+                password: $scope.fields.password.text
+            }
+
+            $http.post('/api/register', user).then(registerSuccess, registerFail);
+
+        } else {
+            //What to do if there is an error
+        }
+    }
+
+    let registerFail = function(response) {
+        console.log(response.data);
+        if (response.data.indexOf('username') > -1) {
+            $scope.fields.username.errorMessage = "This username is already in use";
+            $scope.fields.username.errorStyle = "red";
+            $scope.fields.username.ready = false;
+        }
+        if (response.data.indexOf('email') > -1) {
+            $scope.fields.email.errorMessage = "This email is already linked to an account";
+            $scope.fields.email.errorStyle = "red";
+            $scope.fields.email.ready = false;
+        }
+    }
+
+    let registerSuccess = function() {
+        toastr.success('successfully registered your account', 'Successful');
+        $rootScope.selectedDirective = 'default';
+    }
+
+
     $scope.usernameChange = function() {
         if ($scope.fields.username.text.length < 1) {
             $scope.fields.username.errorMessage = "The username is too short, it must be above 1 character long";

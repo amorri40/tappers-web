@@ -2,5 +2,4 @@ var app = angular.module("tappers").controller('loginController', LoginControlle
 
 function LoginController($scope, $rootScope, $http, $interval) {
     $rootScope.selectedDirective = 'default';
-
 }
