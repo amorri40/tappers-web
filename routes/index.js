@@ -57,16 +57,7 @@ router.post('/login', function(req, res) {
     });
 });
 
-
-
-router.post('/api/register', function(req, res) {
-    UserSchemaData.findOne({
-        username: req.body.username
-    }, function(err, user) {
-        if (user === null || user === undefined) {
-            UserSchemaData.findOne({
-                email: req.body.email
-            }, function(err, user) {
+function zacksfunc(res, req,err, user) {
                 if (user === null || user === undefined) {
                     var userInput = {
                         username: req.body.username,
@@ -79,11 +70,22 @@ router.post('/api/register', function(req, res) {
                 } else {
                     res.status(418).send('email has been found');
                 }
-            });
+            }
+
+function zackfunc2(res,req,err, user) {
+        if (user === null || user === undefined) {
+            UserSchemaData.findOne({
+                email: req.body.email
+            }, zacksfunc.bind(this,res,req));
         } else {
             res.status(418).send('username has been found');
         }
-    });
+    }
+
+router.post('/api/register', function(req, res) {
+    UserSchemaData.findOne({
+        username: req.body.username
+    }, zackfunc2.bind(this, res,req) );
 });
 
 var usernameExists = function(user) {
